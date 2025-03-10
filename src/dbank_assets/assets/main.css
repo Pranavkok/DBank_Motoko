@@ -1,37 +1,111 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styling */
 body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
+  background: linear-gradient(135deg, #1f1f1f, #121212);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
+/* Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Logo */
 img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
+  animation: float 3s infinite ease-in-out;
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    flex-flow: row wrap;
-    max-width: 40vw;
-    margin: auto;
-    align-items: baseline;
+/* Divider */
+.divider {
+  height: 2px;
+  background: white;
+  margin: 20px auto;
+  width: 80%;
+  opacity: 0.5;
 }
 
-button[type="submit"] {
-    padding: 5px 20px;
-    margin: 10px auto;
-    float: right;
+/* Titles */
+h1, h2 {
+  font-weight: 600;
 }
 
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
+/* Balance Animation */
+#value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+  animation: glow 1.5s infinite alternate;
 }
 
-#greeting:empty {
-    display: none;
+/* Input Fields */
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: 0.3s;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Submit Button */
+#submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00ffcc, #0077ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+}
+
+#submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00ffcc; }
+  to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #0077ff; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
