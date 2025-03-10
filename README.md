@@ -24,7 +24,9 @@ A simple decentralized banking app (**DBank**) built using **Motoko** and deploy
 
 ## 🔧 Setup & Run Locally  
    - - 1️⃣ **Install DFINITY SDK (DFX)** - First, install DFINITY SDK (if not already installed).
-      ```sh sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      ```sh
+         sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+
    - - 2️⃣ **Clone the Repository** - git clone https://github.com/your-username/dbank.git - cd dbank
    - - 3️⃣ **Start Local ICP Blockchain** - dfx start --background
    - - 4️⃣ **Deploy the Backend** - dfx deploy
